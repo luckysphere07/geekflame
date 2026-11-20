@@ -1,0 +1,122 @@
+[navigation]
+other = "Main navigation"
+
+[guides]
+other = "Guides"
+
+[about]
+other = "About"
+
+[language]
+other = "Language"
+
+[legal]
+other = "Legal notice"
+
+[privacy]
+other = "Privacy"
+
+[tagline]
+other = "Fuel your tech passion."
+
+[independent]
+other = "Independent tech publication"
+
+[eyebrow]
+other = "THE LAB FOR TECH ENTHUSIASTS"
+
+[heroFirst]
+other = "Live the tech."
+
+[heroSecond]
+other = "Share the passion."
+
+[heroLead]
+other = "Smart home, homelab, AI, networking and gadgets: hands-on projects, practical tutorials and the joy of understanding how things work."
+
+[explore]
+other = "Explore the guides"
+
+[topics]
+other = "Explore topics"
+
+[bilingual]
+other = "bilingual"
+
+[handsOn]
+other = "hands-on"
+
+[curiosity]
+other = "curiosity"
+
+[terminalIntro]
+other = "Inside our lab"
+
+[terminalEnd]
+other = "Curiosity activated"
+
+[terminalCaption]
+other = "Build, learn, share."
+
+[subjects]
+other = "TOPICS"
+
+[topicsTitle]
+other = "Explore what inspires us."
+
+[topicsLead]
+other = "From Zigbee sensors to Proxmox servers, every project brings a chance to learn."
+
+[smartHome]
+other = "Smart Home & Automation"
+
+[homelab]
+other = "Homelab & Servers"
+
+[automation]
+other = "AI & Automation"
+
+[networks]
+other = "IT & Networking"
+
+[reviews]
+other = "Reviews & Gear"
+
+[library]
+other = "THE JOURNAL"
+
+[latest]
+other = "Worth exploring."
+
+[allGuides]
+other = "All guides"
+
+[guide]
+other = "Tutorial"
+
+[read]
+other = "Read the guide"
+
+[comingSoon]
+other = "First articles coming soon."
+
+[comingSoonText]
+other = "We are preparing carefully tested guides in English and French."
+
+[approach]
+other = "OUR PHILOSOPHY"
+
+[approachTitle]
+other = "Build. Understand. Share."
+
+[approachLead]
+other = "We value documented experiments over hype, with reproducible steps and clearly explained limitations."
+
+[safetyNote]
+other = "Adapt all procedures to your own environment and back up important data before making changes."
+
+[notFound]
+other = "We could not find this page."
+
+[home]
+other = "Home"

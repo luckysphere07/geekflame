@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="hero"><div class="shell hero-grid">
+ <div class="hero-copy"><div class="eyebrow"><span class="dot"></span>{{ i18n "eyebrow" }}</div>
+ <h1>{{ i18n "heroFirst" }}<br><em>{{ i18n "heroSecond" }}</em></h1>
+ <p class="lead">{{ i18n "heroLead" }}</p>
+ <div class="hero-actions">{{ with site.GetPage "/articles" }}<a class="btn-primary" href="{{ .RelPermalink }}">{{ i18n "explore" }} <span>↗</span></a>{{ end }}<a class="btn-text" href="#topics">{{ i18n "topics" }} ↓</a></div>
+ <div class="trust-row"><span><b>FR / EN</b> {{ i18n "bilingual" }}</span><span><b>100 %</b> {{ i18n "handsOn" }}</span><span><b>∞</b> {{ i18n "curiosity" }}</span></div>
+ </div>
+ <div class="terminal-card"><div class="terminal-bar"><span class="term-dots"><i></i><i></i><i></i></span><span>geekflame@lab ~</span><span>⚡</span></div>
+ <div class="terminal-content"><div class="muted"># {{ i18n "terminalIntro" }}</div>
+ <div><span class="prompt">❯</span> ha core info</div><div class="term-line"><span class="green">✓</span> Home Assistant</div>
+ <div><span class="prompt">❯</span> docker ps</div><div class="term-line"><span class="green">✓</span> Containers online</div>
+ <div><span class="prompt">❯</span> python3 automate.py</div><div class="term-line"><span class="green">✓</span> Automation ready</div>
+ <div class="spacer-line"></div><div class="term-highlight">{{ i18n "terminalEnd" }}<span class="cursor">▍</span></div></div>
+ <div class="terminal-caption"><span class="online-dot"></span>{{ i18n "terminalCaption" }}</div></div>
+</div></section>
+<section class="domain-section" id="topics"><div class="shell">
+ <div class="section-head"><div><div class="mini-label">{{ i18n "subjects" }}</div><h2>{{ i18n "topicsTitle" }}</h2></div><p>{{ i18n "topicsLead" }}</p></div>
+ <div class="domain-grid">
+  {{ with site.GetPage "/articles" }}{{ $guides := .RelPermalink }}
+  <a class="domain" href="{{ $guides }}"><span class="domain-icon">⌂</span><strong>{{ i18n "smartHome" }}</strong><span>Home Assistant · Zigbee · Shelly</span><span class="domain-arrow">↗</span></a>
+  <a class="domain" href="{{ $guides }}"><span class="domain-icon">▤</span><strong>{{ i18n "homelab" }}</strong><span>Proxmox · Docker · NAS</span><span class="domain-arrow">↗</span></a>
+  <a class="domain" href="{{ $guides }}"><span class="domain-icon">⌘</span><strong>{{ i18n "automation" }}</strong><span>n8n · Ollama · AI</span><span class="domain-arrow">↗</span></a>
+  <a class="domain" href="{{ $guides }}"><span class="domain-icon">◎</span><strong>{{ i18n "networks" }}</strong><span>Linux · Windows · Network</span><span class="domain-arrow">↗</span></a>
+  <a class="domain" href="{{ $guides }}"><span class="domain-icon">◈</span><strong>{{ i18n "reviews" }}</strong><span>Mini PCs · Sensors · Gadgets</span><span class="domain-arrow">↗</span></a>
+  {{ end }}
+ </div></div></section>
+<section class="articles-section"><div class="shell"><div class="section-head compact"><div><div class="mini-label">{{ i18n "library" }}</div><h2>{{ i18n "latest" }}</h2></div>{{ with site.GetPage "/articles" }}<a class="view-all" href="{{ .RelPermalink }}">{{ i18n "allGuides" }} ↗</a>{{ end }}</div>
+ <div class="article-grid">{{ $articles := where site.RegularPages "Section" "articles" }}{{ range first 6 $articles.ByDate.Reverse }}
+ <a href="{{ .RelPermalink }}" class="article-card"><div class="article-top"><span class="tag">{{ with .Params.categories }}{{ index . 0 }}{{ else }}{{ i18n "guide" }}{{ end }}</span><span class="readtime">{{ .ReadingTime }} min</span></div><h3>{{ .Title }}</h3><p>{{ .Description | default (.Summary | plainify | truncate 155) }}</p><div class="card-foot"><span>{{ i18n "read" }}</span><span>↗</span></div></a>
+ {{ else }}<div class="empty-state"><h3>{{ i18n "comingSoon" }}</h3><p>{{ i18n "comingSoonText" }}</p></div>{{ end }}</div>
+</div></section>
+<section class="manifesto"><div class="shell manifesto-inner"><div class="manifesto-icon">{ }</div><div><div class="mini-label">{{ i18n "approach" }}</div><h2>{{ i18n "approachTitle" }}</h2><p>{{ i18n "approachLead" }}</p></div></div></section>
+{{ end }}

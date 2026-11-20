@@ -1,0 +1,41 @@
+baseURL = 'https://geek-flame.com/'
+title = 'GeekFlame'
+defaultContentLanguage = 'fr'
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+timeZone = 'Europe/Paris'
+summaryLength = 28
+
+[params]
+  launchReady = false # Ne passer à true qu'après validation juridique, éditoriale et technique
+
+[languages]
+  [languages.fr]
+    languageName = 'Français'
+    languageCode = 'fr-FR'
+    contentDir = 'content/fr'
+    weight = 1
+    [languages.fr.params]
+      tagline = 'Nourris ta passion tech.'
+      description = 'GeekFlame : domotique, homelab, IA, réseaux et projets informatiques expliqués par la pratique.'
+  [languages.en]
+    languageName = 'English'
+    languageCode = 'en-US'
+    contentDir = 'content/en'
+    weight = 2
+    [languages.en.params]
+      tagline = 'Fuel your tech passion.'
+      description = 'GeekFlame: smart home, homelab, AI, networking and practical technology projects.'
+
+[markup]
+  [markup.highlight]
+    style = 'github-dark'
+    noClasses = false
+
+[outputs]
+  home = ['HTML','RSS']
+  section = ['HTML','RSS']
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'

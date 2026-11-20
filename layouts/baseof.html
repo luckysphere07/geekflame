@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ .Language.Lang }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>{{ if .IsHome }}GeekFlame — {{ site.Params.tagline }}{{ else }}{{ .Title }} · GeekFlame{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+{{ if not site.Params.launchReady }}<meta name="robots" content="noindex,nofollow">{{ else }}<link rel="canonical" href="{{ .Permalink }}">{{ end }}
+{{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}
+{{ if .IsHome }}<link rel="alternate" hreflang="x-default" href="{{ site.BaseURL }}">{{ end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ .Title }}"><meta property="og:description" content="{{ site.Params.description }}">
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="GeekFlame RSS" href="{{ .RelPermalink }}">{{ end }}
+</head>
+<body>
+<div class="top-line"></div>
+<header class="shell nav-wrap">
+ <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="GeekFlame home"><span class="brand-mark">♨</span><span>Geek<span class="brand-light">Flame</span></span></a>
+ <nav aria-label="{{ i18n "navigation" }}">
+   {{ with site.GetPage "/articles" }}<a class="nav-guides" href="{{ .RelPermalink }}">{{ i18n "guides" }}</a>{{ end }}
+   {{ with site.GetPage "/about" }}<a class="nav-about" href="{{ .RelPermalink }}">{{ i18n "about" }}</a>{{ end }}
+   <span class="language-switch" aria-label="{{ i18n "language" }}">{{ range .AllTranslations }}<a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" {{ if eq $.Language.Lang .Language.Lang }}aria-current="page"{{ end }}>{{ upper .Language.Lang }}</a>{{ end }}</span>
+ </nav>
+</header>
+<main>{{ block "main" . }}{{ end }}</main>
+<footer class="site-footer"><div class="shell footer-grid">
+ <div><div class="brand light-brand"><span class="brand-mark">♨</span>Geek<span class="brand-light">Flame</span></div><p>{{ i18n "tagline" }}</p></div>
+ <div class="footer-right">
+ {{ with site.GetPage "/about" }}<a href="{{ .RelPermalink }}">{{ i18n "about" }}</a>{{ end }}
+ {{ with site.GetPage "/legal" }}<a href="{{ .RelPermalink }}">{{ i18n "legal" }}</a>{{ end }}
+ {{ with site.GetPage "/privacy" }}<a href="{{ .RelPermalink }}">{{ i18n "privacy" }}</a>{{ end }}
+ </div></div><div class="shell footer-base">© {{ now.Year }} GeekFlame · {{ i18n "independent" }}</div>
+</footer></body></html>

@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="page-intro"><div class="shell"><div class="mini-label">{{ i18n "library" }}</div><h1>{{ .Title }}</h1><p>{{ .Description }}</p></div></section>
+<section class="listing"><div class="shell article-grid">{{ range .Pages.ByDate.Reverse }}<a class="article-card" href="{{ .RelPermalink }}"><div class="article-top"><span class="tag">{{ with .Params.categories }}{{ index . 0 }}{{ else }}{{ i18n "guide" }}{{ end }}</span><span class="readtime">{{ .ReadingTime }} min</span></div><h3>{{ .Title }}</h3><p>{{ .Description }}</p><div class="card-foot">{{ i18n "read" }} ↗</div></a>{{ else }}<p>{{ i18n "comingSoonText" }}</p>{{ end }}</div></section>
+{{ end }}

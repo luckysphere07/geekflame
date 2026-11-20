@@ -1,0 +1,122 @@
+[navigation]
+other = "Navigation principale"
+
+[guides]
+other = "Guides"
+
+[about]
+other = "À propos"
+
+[language]
+other = "Langue"
+
+[legal]
+other = "Mentions légales"
+
+[privacy]
+other = "Confidentialité"
+
+[tagline]
+other = "Nourris ta passion tech."
+
+[independent]
+other = "Média indépendant"
+
+[eyebrow]
+other = "LE LAB DES PASSIONNÉS DE TECH"
+
+[heroFirst]
+other = "La tech se vit."
+
+[heroSecond]
+other = "La passion se partage."
+
+[heroLead]
+other = "Domotique, homelab, IA, réseaux et gadgets : des expériences concrètes, des tutos accessibles et le plaisir de comprendre ce qui se passe sous le capot."
+
+[explore]
+other = "Explorer les guides"
+
+[topics]
+other = "Nos univers"
+
+[bilingual]
+other = "bilingue"
+
+[handsOn]
+other = "pratique"
+
+[curiosity]
+other = "curiosité"
+
+[terminalIntro]
+other = "Dans notre labo"
+
+[terminalEnd]
+other = "Curiosité activée"
+
+[terminalCaption]
+other = "Tester, comprendre, partager."
+
+[subjects]
+other = "NOS UNIVERS"
+
+[topicsTitle]
+other = "Tout ce qui nous passionne."
+
+[topicsLead]
+other = "Du capteur Zigbee au serveur Proxmox, chaque projet est une nouvelle occasion d’apprendre."
+
+[smartHome]
+other = "Domotique & Smart Home"
+
+[homelab]
+other = "Homelab & Serveurs"
+
+[automation]
+other = "IA & Automatisation"
+
+[networks]
+other = "IT & Réseaux"
+
+[reviews]
+other = "Tests & Matériel"
+
+[library]
+other = "LE JOURNAL"
+
+[latest]
+other = "À découvrir."
+
+[allGuides]
+other = "Tous les guides"
+
+[guide]
+other = "Tutoriel"
+
+[read]
+other = "Lire le guide"
+
+[comingSoon]
+other = "Les premiers articles arrivent."
+
+[comingSoonText]
+other = "Nous préparons des guides vérifiés en français et en anglais."
+
+[approach]
+other = "NOTRE PHILOSOPHIE"
+
+[approachTitle]
+other = "Tester. Comprendre. Partager."
+
+[approachLead]
+other = "Nous préférons les expériences documentées aux promesses faciles, avec des étapes reproductibles et des limites clairement expliquées."
+
+[safetyNote]
+other = "Adaptez les procédures à votre environnement et prévoyez une sauvegarde avant toute modification."
+
+[notFound]
+other = "Cette page est introuvable."
+
+[home]
+other = "Accueil"

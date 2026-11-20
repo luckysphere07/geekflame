@@ -1,0 +1,5 @@
+{{ define "main" }}
+<article class="shell article-container">{{ with site.GetPage "/articles" }}<a class="back-link" href="{{ .RelPermalink }}">← {{ i18n "allGuides" }}</a>{{ end }}
+<h1>{{ .Title }}</h1><p class="article-lead">{{ .Description }}</p><div class="article-meta">{{ .Date.Format "2006-01-02" }} {{ if .IsPage }}· {{ .ReadingTime }} min{{ end }}</div>
+<div class="article-body">{{ .Content }}</div><div class="article-note">{{ i18n "safetyNote" }}</div></article>
+{{ end }}
